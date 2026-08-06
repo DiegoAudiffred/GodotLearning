@@ -3,37 +3,17 @@
 [ext_resource type="PackedScene" uid="uid://bl7sm5iblb6y1" path="res://Spechan.tscn" id="1_7pfry"]
 [ext_resource type="Script" uid="uid://sufdoebjfk7u" path="res://escena_2d.gd" id="1_qffty"]
 [ext_resource type="Script" uid="uid://bbanfvctkgqu1" path="res://circuito.gd" id="3_8chub"]
-[ext_resource type="Texture2D" uid="uid://bqk4frc74nvrt" path="res://diagrama2.png" id="4_1a3fp"]
-[ext_resource type="PackedScene" uid="uid://c83e4agdoje54" path="res://susukasan.tscn" id="4_fs5gc"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uuyli"]
-height = 146.01991
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ftycv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uuyli"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uuyli"]
+
 [node name="Escena2D" type="Node2D" unique_id=106212911]
 script = ExtResource("1_qffty")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1393205740]
-position = Vector2(402, 10)
-script = ExtResource("3_8chub")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=299097942]
-position = Vector2(183.99997, 242)
-rotation = 1.5707964
-scale = Vector2(8.04, 8.04)
-shape = SubResource("CapsuleShape2D_uuyli")
-
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=379274309]
-position = Vector2(192.99997, 246)
-scale = Vector2(0.59499997, 0.59499997)
-texture = ExtResource("4_1a3fp")
-
 [node name="Spechan" parent="." unique_id=1001815799 instance=ExtResource("1_7pfry")]
-position = Vector2(37, 17)
 
 [node name="Plataforma" type="StaticBody2D" parent="." unique_id=1440597344]
 position = Vector2(403, 616)
@@ -51,6 +31,15 @@ offset_top = 1.0
 offset_right = 346.0
 offset_bottom = 24.0
 text = "Label Stamina"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1393205740]
+script = ExtResource("3_8chub")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=299097942]
+position = Vector2(171.00002, 98)
+rotation = 1.5707964
+scale = Vector2(8.04, 8.04)
+shape = SubResource("CapsuleShape2D_uuyli")
 
 [node name="OptionButton" type="OptionButton" parent="." unique_id=109354840]
 offset_left = 644.0
@@ -72,9 +61,6 @@ popup/item_4/text = "5"
 popup/item_4/id = 5
 popup/item_5/text = "6"
 popup/item_5/id = 6
-
-[node name="Susukasan" parent="." unique_id=1413049660 instance=ExtResource("4_fs5gc")]
-position = Vector2(37, 18)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

@@ -1,11 +1,13 @@
 extends CharacterBody2D
 
+var id: int = 0
 var speed: float = 0.0
 var estamina: float = 0.0
 var estaminaactual: float = 0.0
 var consumo_estamina: float = 100.0
 var regeneracion_estamina: float = 100.0
 var nombre_corredora: String = ""
+var pace: String = ""
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -28,6 +30,10 @@ func _physics_process(delta: float) -> void:
 
 func get_stamina() -> float:
 	return estaminaactual
+	
+func get_id() -> int:
+	return id
+
 
 func _update_animation(direction: Vector2) -> void:
 	if direction != Vector2.ZERO and velocity != Vector2.ZERO:
@@ -37,11 +43,13 @@ func _update_animation(direction: Vector2) -> void:
 	else:
 		sprite.play("walk")
 
-func cargar_datos(id_buscado: String) -> void:
+func cargar_datos(id_buscado: int) -> void:
 	for chica in DatosUmamusume.LISTA:
 		if chica["id"] == id_buscado:
+			id = chica["id"]
 			speed = chica["velocidad"]
 			estamina = chica["estamina"]
 			estaminaactual = estamina
 			nombre_corredora = chica["nombre"]
+			pace = chica["pace"]
 			break
