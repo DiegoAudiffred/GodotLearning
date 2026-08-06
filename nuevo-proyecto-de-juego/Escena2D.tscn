@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://dkxikbuetkcrd"]
 
 [ext_resource type="PackedScene" uid="uid://bl7sm5iblb6y1" path="res://Spechan.tscn" id="1_7pfry"]
+[ext_resource type="Script" uid="uid://sufdoebjfk7u" path="res://escena_2d.gd" id="1_qffty"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ftycv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uuyli"]
 
 [node name="Escena2D" type="Node2D" unique_id=106212911]
+script = ExtResource("1_qffty")
 
 [node name="Spechan" parent="." unique_id=1001815799 instance=ExtResource("1_7pfry")]
 
@@ -19,3 +21,9 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma" unique_id=450964800]
 shape = SubResource("RectangleShape2D_uuyli")
 debug_color = Color(0.06767778, 0.41932657, 0, 0.41960785)
+
+[node name="label_stamina" type="Label" parent="." unique_id=1501560113]
+offset_left = 236.0
+offset_top = 1.0
+offset_right = 346.0
+offset_bottom = 24.0
