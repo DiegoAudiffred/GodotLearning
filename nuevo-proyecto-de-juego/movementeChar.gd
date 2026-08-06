@@ -1,31 +1,36 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+var speed: float = 100.0
+var estamina: float = 0.0
+var nombre_corredora: String = ""
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 func _physics_process(delta: float) -> void:
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
+	var direction := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	
+	if direction != Vector2.ZERO:
+		velocity = direction * speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity = velocity.move_toward(Vector2.ZERO, speed)
 
 	_update_animation(direction)
 
 	move_and_slide()
 
-func _update_animation(direction: float) -> void:
-	if direction != 0:
+func _update_animation(direction: Vector2) -> void:
+	if direction != Vector2.ZERO:
 		sprite.play("walk")
-		sprite.flip_h = direction > 0
+		if direction.x != 0:
+			sprite.flip_h = direction.x > 0
 	else:
 		sprite.play("walk")
-	print(direction)
+
+func cargar_datos(id_buscado: String) -> void:
+	for chica in DatosUmamusume.LISTA:
+		if chica["id"] == id_buscado:
+			speed = chica["velocidad"]
+			estamina = chica["estamina"]
+			nombre_corredora = chica["nombre"]
+			modulate = chica["color"]			
+			break
