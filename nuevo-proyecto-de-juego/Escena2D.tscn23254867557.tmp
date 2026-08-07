@@ -8,7 +8,6 @@
 [ext_resource type="Script" uid="uid://dvqxgu7wxxrdr" path="res://camera_2d.gd" id="6_lftkx"]
 [ext_resource type="Texture2D" uid="uid://b8roc28ad4y6x" path="res://addons/escenario/Grass_Middle.png" id="6_rpfy3"]
 [ext_resource type="Texture2D" uid="uid://deb3hw5fedne2" path="res://addons/escenario/asientos.png" id="7_gvgdv"]
-[ext_resource type="Texture2D" uid="uid://muhqbrnh6aj8" path="res://addons/escenario/titulo.jpg" id="9_emvm7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uuyli"]
 height = 146.01991
@@ -39,32 +38,9 @@ rotation = 1.5707964
 scale = Vector2(8.04, 8.04)
 shape = SubResource("CapsuleShape2D_uuyli")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=98618927]
-position = Vector2(904, -376)
-zoom = Vector2(0.5, 0.5)
-script = ExtResource("6_lftkx")
-velocidad = 300.0
-distancia = 10000.0
-metadata/_edit_group_ = true
-
-[node name="label_stamina" type="Label" parent="Camera2D" unique_id=1501560113]
-offset_left = -216.0
-offset_top = -232.0
-offset_right = -106.0
-offset_bottom = -209.0
-text = "Label Stamina"
-
-[node name="OptionButton" type="OptionButton" parent="Camera2D" unique_id=109354840]
-offset_left = 128.0
-offset_top = -232.0
-offset_right = 250.0
-offset_bottom = -201.0
-allow_reselect = true
-
 [node name="Spechan" parent="." unique_id=1001815799 instance=ExtResource("1_7pfry")]
 z_index = 1
 position = Vector2(193, 107)
-scale = Vector2(1, 1)
 
 [node name="Plataforma" type="StaticBody2D" parent="." unique_id=1440597344]
 position = Vector2(403, 616)
@@ -76,10 +52,45 @@ metadata/_edit_group_ = true
 shape = SubResource("RectangleShape2D_uuyli")
 debug_color = Color(0.06767778, 0.41932657, 0, 0.41960785)
 
+[node name="OptionButton" type="OptionButton" parent="." unique_id=109354840]
+offset_left = 960.0
+offset_top = 80.0
+offset_right = 1082.0
+offset_bottom = 111.0
+selected = 0
+allow_reselect = true
+item_count = 6
+popup/item_0/text = "1"
+popup/item_0/id = 1
+popup/item_1/text = "2"
+popup/item_1/id = 2
+popup/item_2/text = "3"
+popup/item_2/id = 3
+popup/item_3/text = "4"
+popup/item_3/id = 4
+popup/item_4/text = "5"
+popup/item_4/id = 5
+popup/item_5/text = "6"
+popup/item_5/id = 6
+
 [node name="Susukasan" parent="." unique_id=1413049660 instance=ExtResource("4_fs5gc")]
 z_index = 1
 position = Vector2(143, 106)
-scale = Vector2(1, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=98618927]
+position = Vector2(856, -16)
+zoom = Vector2(0.655, 0.655)
+script = ExtResource("6_lftkx")
+velocidad = 300.0
+distancia = 10000.0
+metadata/_edit_group_ = true
+
+[node name="label_stamina" type="Label" parent="Camera2D" unique_id=1501560113]
+offset_left = -384.0
+offset_top = 136.0
+offset_right = -274.0
+offset_bottom = 159.0
+text = "Label Stamina"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1098615598]
 position = Vector2(176, 152)
@@ -115,11 +126,6 @@ texture = ExtResource("7_gvgdv")
 position = Vector2(-984, 1144)
 texture = ExtResource("7_gvgdv")
 
-[node name="Titulo" type="Sprite2D" parent="." unique_id=554535185]
-position = Vector2(-704, 88)
-texture = ExtResource("9_emvm7")
-
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
-[connection signal="item_selected" from="Camera2D/OptionButton" to="." method="_on_option_button_item_selected"]
-[connection signal="ready" from="Titulo" to="." method="_on_titulo_ready"]
+[connection signal="item_selected" from="OptionButton" to="." method="_on_option_button_item_selected"]

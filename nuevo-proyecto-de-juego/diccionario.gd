@@ -4,16 +4,16 @@ const LISTA: Array[Dictionary] = [
 	{
 		"id": 1,
 		"nombre": "Special Week",
-		"velocidad": 100.0,
-		"estamina": 400.0,
+		"velocidad": 500.0,
+		"estamina": 1000.0,
 		"color": Color(0.9, 0.4, 0.6),
 		"pace":"Late Surger",
 	},
 	{
 		"id": 2,
 		"nombre": "Silence Suzuka",
-		"velocidad": 125.0,
-		"estamina": 350.0,
+		"velocidad": 600.0,
+		"estamina": 850.0,
 		"color": Color(0.2, 0.8, 0.4),
 		"pace":"Front Runner"
 
