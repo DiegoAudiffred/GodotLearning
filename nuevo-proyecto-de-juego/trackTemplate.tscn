@@ -5,6 +5,10 @@
 [node name="Track" type="Node2D" unique_id=24556793]
 script = ExtResource("1_qods3")
 
+[node name="name" type="Label" parent="." unique_id=1433695853]
+offset_right = 40.0
+offset_bottom = 23.0
+
 [node name="raceSong" type="AudioStreamPlayer2D" parent="." unique_id=965580421]
 
 [node name="raceNameBanner" type="Sprite2D" parent="." unique_id=2030716276]

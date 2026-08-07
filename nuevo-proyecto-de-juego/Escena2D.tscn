@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://sufdoebjfk7u" path="res://escena_2d.gd" id="1_qffty"]
 [ext_resource type="Script" uid="uid://bbanfvctkgqu1" path="res://circuito.gd" id="3_8chub"]
 [ext_resource type="PackedScene" uid="uid://c83e4agdoje54" path="res://susukasan.tscn" id="4_fs5gc"]
-[ext_resource type="Texture2D" uid="uid://b041pjf2n888d" path="res://addons/escenario/Fences.png" id="5_1a3fp"]
 [ext_resource type="Script" uid="uid://dvqxgu7wxxrdr" path="res://camera_2d.gd" id="6_lftkx"]
 [ext_resource type="Texture2D" uid="uid://b8roc28ad4y6x" path="res://addons/escenario/Grass_Middle.png" id="6_rpfy3"]
 [ext_resource type="Texture2D" uid="uid://deb3hw5fedne2" path="res://addons/escenario/asientos.png" id="7_gvgdv"]
@@ -80,22 +79,6 @@ debug_color = Color(0.06767778, 0.41932657, 0, 0.41960785)
 z_index = 1
 position = Vector2(143, 106)
 scale = Vector2(1, 1)
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1098615598]
-position = Vector2(176, 152)
-scale = Vector2(2.458079, 2.7500005)
-texture = ExtResource("5_1a3fp")
-region_enabled = true
-region_rect = Rect2(19.50531, 0, 41.77887, 16.069145)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1451180247]
-position = Vector2(272, 152)
-scale = Vector2(2.458079, 2.7500005)
-texture = ExtResource("5_1a3fp")
-region_enabled = true
-region_rect = Rect2(19.50531, 0, 41.77887, 16.069145)
-metadata/_edit_group_ = true
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1620446207]
 scroll_offset = Vector2(0, -2208)
