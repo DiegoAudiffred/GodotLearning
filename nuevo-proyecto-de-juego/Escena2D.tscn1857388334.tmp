@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dkxikbuetkcrd"]
+
+[ext_resource type="PackedScene" uid="uid://bl7sm5iblb6y1" path="res://Spechan.tscn" id="1_7pfry"]
+[ext_resource type="Script" uid="uid://sufdoebjfk7u" path="res://escena_2d.gd" id="1_qffty"]
+[ext_resource type="Script" uid="uid://bbanfvctkgqu1" path="res://circuito.gd" id="3_8chub"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ftycv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uuyli"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uuyli"]
+
+[node name="Escena2D" type="Node2D" unique_id=106212911]
+script = ExtResource("1_qffty")
+
+[node name="Spechan" parent="." unique_id=1001815799 instance=ExtResource("1_7pfry")]
+
+[node name="Plataforma" type="StaticBody2D" parent="." unique_id=1440597344]
+position = Vector2(403, 616)
+scale = Vector2(100, 2.87)
+physics_material_override = SubResource("PhysicsMaterial_ftycv")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma" unique_id=450964800]
+shape = SubResource("RectangleShape2D_uuyli")
+debug_color = Color(0.06767778, 0.41932657, 0, 0.41960785)
+
+[node name="label_stamina" type="Label" parent="." unique_id=1501560113]
+offset_left = 236.0
+offset_top = 1.0
+offset_right = 346.0
+offset_bottom = 24.0
+text = "Label Stamina"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1393205740]
+script = ExtResource("3_8chub")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=299097942]
+position = Vector2(171.00002, 98)
+rotation = 1.5707964
+scale = Vector2(8.04, 8.04)
+shape = SubResource("CapsuleShape2D_uuyli")
+
+[node name="OptionButton" type="OptionButton" parent="." unique_id=109354840]
+offset_left = 644.0
+offset_top = 7.0
+offset_right = 766.0
+offset_bottom = 38.0
+selected = 0
+allow_reselect = true
+item_count = 6
+popup/item_0/text = "1"
+popup/item_0/id = 1
+popup/item_1/text = "2"
+popup/item_1/id = 2
+popup/item_2/text = "3"
+popup/item_2/id = 3
+popup/item_3/text = "4"
+popup/item_3/id = 4
+popup/item_4/text = "5"
+popup/item_4/id = 5
+popup/item_5/text = "6"
+popup/item_5/id = 6
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[connection signal="item_selected" from="OptionButton" to="." method="_on_option_button_item_selected"]

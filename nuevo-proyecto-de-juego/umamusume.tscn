@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c1q3kid5uvu7r"]
+
+[ext_resource type="Script" uid="uid://bm6wttcgf8ndo" path="res://movementeChar.gd" id="1_7by05"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3d5jx"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uuyli"]
+radius = 13.0
+height = 40.0
+
+[node name="Umamusume" type="CharacterBody2D" unique_id=1001815799]
+scale = Vector2(5, 5)
+platform_wall_layers = 1
+script = ExtResource("1_7by05")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1129245953]
+sprite_frames = SubResource("SpriteFrames_3d5jx")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1340470708]
+position = Vector2(-5, 12)
+shape = SubResource("CapsuleShape2D_uuyli")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

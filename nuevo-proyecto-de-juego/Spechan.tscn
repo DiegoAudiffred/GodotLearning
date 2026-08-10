@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://bl7sm5iblb6y1"]
+
+[ext_resource type="PackedScene" uid="uid://c1q3kid5uvu7r" path="res://umamusume.tscn" id="1_trybg"]
+[ext_resource type="Script" uid="uid://bgk7tf2nb1yea" path="res://spechan.gd" id="2_iadgl"]
+[ext_resource type="Texture2D" uid="uid://b2tq6mmhbk1ap" path="res://addons/Spechan/AFK/afk1.png" id="3_bjr76"]
+[ext_resource type="Texture2D" uid="uid://csgtgmelhkkdd" path="res://addons/Spechan/2d694244-fbbe-47e3-b42e-72824b2f83f1.png" id="3_ys371"]
+[ext_resource type="Texture2D" uid="uid://b3vao7bgdy2n7" path="res://addons/Spechan/3d9633a1-67b9-48dd-9550-d6fcd955fc2e.png" id="4_cgxa2"]
+[ext_resource type="Texture2D" uid="uid://4d5o3b1qdi8p" path="res://addons/Spechan/AFK/afk2.png" id="4_eoaxs"]
+[ext_resource type="Texture2D" uid="uid://cb86jouslpuub" path="res://addons/Spechan/90cccff9-a8cc-48e6-90d4-ff6782564e48.png" id="5_i0feu"]
+[ext_resource type="Texture2D" uid="uid://d284j5gkn53a0" path="res://addons/Spechan/AFK/afk3.png" id="5_qm180"]
+[ext_resource type="Texture2D" uid="uid://dr0jxte5al5hg" path="res://addons/Spechan/AFK/afk4.png" id="6_60lwv"]
+[ext_resource type="Texture2D" uid="uid://cn7iqlqrtcvug" path="res://addons/Spechan/7732e8c6-8c54-4ae3-9411-0e1563a5a466.png" id="6_n0003"]
+[ext_resource type="Texture2D" uid="uid://bpy1dyaqxng40" path="res://addons/Spechan/AFK/afk5.png" id="7_dmu2r"]
+[ext_resource type="Texture2D" uid="uid://b5hepatwpcj60" path="res://addons/Spechan/153411bb-7252-462d-b7fe-05917ab1e36d.png" id="7_sglls"]
+[ext_resource type="Texture2D" uid="uid://ivj3ccpgnmff" path="res://addons/Spechan/AFK/afk6.png" id="8_2s2nv"]
+[ext_resource type="Texture2D" uid="uid://b6j5s8j5pc0lb" path="res://addons/Spechan/10965192-e02a-4c3e-9bd5-54ab97d3c206.png" id="8_4ra5k"]
+[ext_resource type="Texture2D" uid="uid://bx7dlrs23gr83" path="res://addons/Spechan/c15d7088-b76c-4f03-a659-b9b74eb71ee5.png" id="9_augcj"]
+[ext_resource type="Texture2D" uid="uid://yir70kng1fkw" path="res://addons/Spechan/AFK/afk7.png" id="9_aynpq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iadgl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_bjr76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_eoaxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qm180")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_60lwv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dmu2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2s2nv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_aynpq")
+}],
+"loop": 1,
+"name": &"afk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ys371")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cgxa2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_i0feu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_n0003")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sglls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4ra5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_augcj")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Spechan" unique_id=1001815799 instance=ExtResource("1_trybg")]
+script = ExtResource("2_iadgl")
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=1129245953]
+sprite_frames = SubResource("SpriteFrames_iadgl")
+animation = &"afk"
