@@ -19,16 +19,17 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	
 	var velocidad_actual: float = speed
-	var consumo_actual: float = consumo_estamina
+	#var consumo_actual: float = consumo_estamina
 	
 	if Input.is_action_pressed("Shift") and estaminaactual > 0.0:
 		velocidad_actual *= extra_speed
-		consumo_actual *= 2.0
-
+		increase_stamina_usage(2)
+	else:
+		set_normal_stamina_usage()
 	if direction != Vector2.ZERO:
 		if estaminaactual > 0.0:
 			velocity = direction * velocidad_actual
-			estaminaactual = maxf(0.0, estaminaactual - (consumo_actual * delta))
+			estaminaactual = maxf(0.0, estaminaactual - (consumo_estamina * delta))
 		else:
 			velocity = Vector2.ZERO
 	else:
@@ -39,11 +40,24 @@ func _physics_process(delta: float) -> void:
 	_update_animation(direction)
 	move_and_slide()
 
-func get_stamina() -> float:
-	return estaminaactual
+func increase_stamina_usage(increased)->void:
+	consumo_estamina = consumo_estamina * increased
+	print("consumo actual por subida"+str(consumo_estamina))
+
+func decrease_stamina_usage(increased)->void:
+	consumo_estamina = consumo_estamina / increased
+	print("consumo actual por bajada"+str(consumo_estamina))
+
+func set_normal_stamina_usage()->void:
+	consumo_estamina = 100
 	
+func get_stamina() -> float:
+		return estaminaactual
 func get_id() -> int:
 	return id
+
+func get_nombre() -> String:
+	return nombre_corredora
 
 func _update_animation(direction: Vector2) -> void:
 	if direction != Vector2.ZERO and velocity != Vector2.ZERO:

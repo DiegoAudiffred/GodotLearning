@@ -28,4 +28,6 @@ animation = &"walk"
 position = Vector2(-5, 12)
 shape = SubResource("CapsuleShape2D_uuyli")
 
+[node name="umaImage" type="Sprite2D" parent="." unique_id=575465048]
+
 [connection signal="input_event" from="." to="." method="_on_input_event"]
