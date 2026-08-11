@@ -28,7 +28,7 @@ func _on_boton_pressed() -> void:
 	var spechan := preload("res://addons/Umas/Spechan/Spechan.tscn")
 	var susukasan := preload("res://addons/Umas/Susukasan/susukasan.tscn")
 
-	var seleccionadas: Array[PackedScene] = [spechan]#,susukasan ]
+	var seleccionadas: Array[PackedScene] = [susukasan]#,susukasan ]
 	pista.cargar_participantes(seleccionadas)
 
 	get_tree().root.add_child(pista) #agrega el nodo pista

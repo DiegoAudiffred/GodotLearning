@@ -17,8 +17,14 @@ enum Pace { Front_Runner, Pace_Chaser, Late_Surger, End_Closer }
 
 @export var habilidades: Array[HabilidadData] = []
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+#func _enter_tree() -> void:
+#	set_multiplayer_authority(name.to_int())
 
+
+	# ... Aquí va todo tu código actual de movimiento y estamina ...
 func _physics_process(delta: float) -> void:
+#	if not is_multiplayer_authority():
+#		return
 	var direction := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	
 	var velocidad_actual: float = speed

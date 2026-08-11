@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HabilidadData" format=3 uid="uid://ll7jsr2gup74"]
+
+[ext_resource type="Script" uid="uid://57xugxdh48cd" path="res://addons/Habilidades/HabilidadData.gd" id="1_bq6t1"]
+
+[resource]
+script = ExtResource("1_bq6t1")
+id = "2"
+nombre = "Focus"
+duracion = 2.0
+cualquier_fase = false
+fases_permitidas = Array[int]([1])
+multiplicador_velocidad = 5.0
+metadata/_custom_type_script = "uid://57xugxdh48cd"

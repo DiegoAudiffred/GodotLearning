@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://c83e4agdoje54"]
 
-[ext_resource type="PackedScene" uid="uid://c8y8x0j123456" path="res://addons/Umas/umamusume.tscn" id="1_base"]
+[ext_resource type="PackedScene" uid="uid://c1q3kid5uvu7r" path="res://addons/Umas/umamusume.tscn" id="1_base"]
 [ext_resource type="Script" uid="uid://cricmg1r183yb" path="res://addons/Umas/Susukasan/susukasan.gd" id="2_f645x"]
 [ext_resource type="Texture2D" uid="uid://did4spkq7l8b1" path="res://addons/Umas/Susukasan/AFK/afk 1.png" id="3_khuss"]
+[ext_resource type="Script" uid="uid://57xugxdh48cd" path="res://addons/Habilidades/HabilidadData.gd" id="3_po7uu"]
 [ext_resource type="Texture2D" uid="uid://bx2o7iujak3iy" path="res://addons/Umas/Susukasan/AFK/afk 2.png" id="4_aqmuc"]
+[ext_resource type="Resource" uid="uid://ll7jsr2gup74" path="res://addons/Habilidades/Focus.tres" id="4_mx1qe"]
 [ext_resource type="Texture2D" uid="uid://bfgx6t3r1picg" path="res://addons/Umas/Susukasan/AFK/afk 3.png" id="5_jse8b"]
 [ext_resource type="Texture2D" uid="uid://cakv0e4v1h40p" path="res://addons/Umas/Susukasan/AFK/afk 4.png" id="6_fblrs"]
 [ext_resource type="Texture2D" uid="uid://deuufrnf54uhx" path="res://addons/Umas/Susukasan/AFK/afk 5.png" id="7_j6p0e"]
@@ -101,9 +103,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Susuka" instance=ExtResource("1_base")]
+[node name="Susuka" unique_id=1696476430 instance=ExtResource("1_base")]
 script = ExtResource("2_f645x")
+habilidades = Array[ExtResource("3_po7uu")]([ExtResource("4_mx1qe")])
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1129245953]
 sprite_frames = SubResource("SpriteFrames_3o7pc")
-animation = &"last_spurt"

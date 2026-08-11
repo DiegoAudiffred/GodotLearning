@@ -62,3 +62,6 @@ visible = false
 position = Vector2(-1120, -32)
 scale = Vector2(1.045, 1.045)
 texture = ExtResource("3_2n320")
+
+[node name="MultiplayerSpawner" parent="." index="6" unique_id=175093288]
+_spawnable_scenes = PackedStringArray("uid://c83e4agdoje54", "uid://bl7sm5iblb6y1")

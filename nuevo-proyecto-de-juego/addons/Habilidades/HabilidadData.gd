@@ -51,13 +51,10 @@ func intentar_activar(corredora: CharacterBody2D, contexto_carrera: TrackTemplat
 	return true
 
 func _validar_condiciones(corredora: CharacterBody2D, contexto_carrera: TrackTemplate) -> bool:
-	# 1. Validar Fase de la carrera (Soporta múltiples fases o cualquiera)
 	if not cualquier_fase:
-		# Si la fase actual de la pista no está en la lista de permitidas, no se activa
 		if not contexto_carrera.estado_actual in fases_permitidas:
 			return false
 
-	# 2. Validar Posición en la carrera
 	if posicion_maxima > 0 or posicion_minima > 0:
 		var pos_actual: int = contexto_carrera.obtener_posicion_corredora(corredora.get_id())
 		if pos_actual != -1:
@@ -66,13 +63,11 @@ func _validar_condiciones(corredora: CharacterBody2D, contexto_carrera: TrackTem
 			if posicion_minima > 0 and pos_actual < posicion_minima:
 				return false
 
-	# 3. Validar Umbral de Estamina
 	if estamina_maxima_porcentaje > 0.0:
 		var porcentaje_actual: float = corredora.estaminaactual / corredora.estamina
 		if porcentaje_actual > estamina_maxima_porcentaje:
 			return false
 
-	# 4. Validar Terreno actual de la corredora
 	var pos_x: float = corredora.global_position.x
 	if requiere_subida and not contexto_carrera.esta_en_subida(pos_x):
 		return false
@@ -81,7 +76,6 @@ func _validar_condiciones(corredora: CharacterBody2D, contexto_carrera: TrackTem
 	if requiere_curva and not contexto_carrera.esta_en_curva(pos_x):
 		return false
 
-	# 5. Validar Pace / Estrategia
 	if not pace_requerido.is_empty() and not corredora.pace in pace_requerido:
 		return false
 
