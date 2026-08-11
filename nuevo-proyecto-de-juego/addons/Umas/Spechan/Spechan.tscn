@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://bl7sm5iblb6y1"]
+
+[ext_resource type="PackedScene" uid="uid://c1q3kid5uvu7r" path="res://addons/Umas/umamusume.tscn" id="1_base"]
+[ext_resource type="Script" uid="uid://bgk7tf2nb1yea" path="res://addons/Umas/Spechan/spechan.gd" id="2_iadgl"]
+[ext_resource type="Texture2D" uid="uid://b2tq6mmhbk1ap" path="res://addons/Umas/Spechan/AFK/afk1.png" id="3_bjr76"]
+[ext_resource type="Script" uid="uid://57xugxdh48cd" path="res://addons/Habilidades/HabilidadData.gd" id="3_j1ipl"]
+[ext_resource type="Texture2D" uid="uid://4d5o3b1qdi8p" path="res://addons/Umas/Spechan/AFK/afk2.png" id="4_eoaxs"]
+[ext_resource type="Resource" uid="uid://bjp8372x3btdj" path="res://addons/Habilidades/ShootingStar.tres" id="4_ytiny"]
+[ext_resource type="Texture2D" uid="uid://d284j5gkn53a0" path="res://addons/Umas/Spechan/AFK/afk3.png" id="5_qm180"]
+[ext_resource type="Texture2D" uid="uid://dr0jxte5al5hg" path="res://addons/Umas/Spechan/AFK/afk4.png" id="6_60lwv"]
+[ext_resource type="Texture2D" uid="uid://bpy1dyaqxng40" path="res://addons/Umas/Spechan/AFK/afk5.png" id="7_dmu2r"]
+[ext_resource type="Texture2D" uid="uid://ivj3ccpgnmff" path="res://addons/Umas/Spechan/AFK/afk6.png" id="8_2s2nv"]
+[ext_resource type="Texture2D" uid="uid://yir70kng1fkw" path="res://addons/Umas/Spechan/AFK/afk7.png" id="9_aynpq"]
+[ext_resource type="Texture2D" uid="uid://dn0bpl2etcprw" path="res://addons/Umas/Spechan/lastSpurt/1.png" id="10_fhkra"]
+[ext_resource type="Texture2D" uid="uid://bum0hai7t7e2a" path="res://addons/Umas/Spechan/lastSpurt/2.png" id="11_gv5sl"]
+[ext_resource type="Texture2D" uid="uid://x6qw3j4rsmj1" path="res://addons/Umas/Spechan/lastSpurt/3.png" id="12_j1ipl"]
+[ext_resource type="Texture2D" uid="uid://cpk03cxreymjl" path="res://addons/Umas/Spechan/lastSpurt/4.png" id="13_ytiny"]
+[ext_resource type="Texture2D" uid="uid://j8e388j4ptv0" path="res://addons/Umas/Spechan/lastSpurt/5.png" id="14_hc7ja"]
+[ext_resource type="Texture2D" uid="uid://cnqanb3fh36kw" path="res://addons/Umas/Spechan/lastSpurt/6.png" id="15_lv4c4"]
+[ext_resource type="Texture2D" uid="uid://b0kd0mwxxfy6o" path="res://addons/Umas/Spechan/lastSpurt/7.png" id="16_x8hit"]
+[ext_resource type="Texture2D" uid="uid://csgtgmelhkkdd" path="res://addons/Umas/Spechan/walk/2d694244-fbbe-47e3-b42e-72824b2f83f1.png" id="19_ueyps"]
+[ext_resource type="Texture2D" uid="uid://b3vao7bgdy2n7" path="res://addons/Umas/Spechan/walk/3d9633a1-67b9-48dd-9550-d6fcd955fc2e.png" id="20_xr2cs"]
+[ext_resource type="Texture2D" uid="uid://cb86jouslpuub" path="res://addons/Umas/Spechan/walk/90cccff9-a8cc-48e6-90d4-ff6782564e48.png" id="21_1ctq8"]
+[ext_resource type="Texture2D" uid="uid://cn7iqlqrtcvug" path="res://addons/Umas/Spechan/walk/7732e8c6-8c54-4ae3-9411-0e1563a5a466.png" id="22_5u8ei"]
+[ext_resource type="Texture2D" uid="uid://b5hepatwpcj60" path="res://addons/Umas/Spechan/walk/153411bb-7252-462d-b7fe-05917ab1e36d.png" id="23_7yrog"]
+[ext_resource type="Texture2D" uid="uid://b6j5s8j5pc0lb" path="res://addons/Umas/Spechan/walk/10965192-e02a-4c3e-9bd5-54ab97d3c206.png" id="24_g3hg0"]
+[ext_resource type="Texture2D" uid="uid://bx7dlrs23gr83" path="res://addons/Umas/Spechan/walk/c15d7088-b76c-4f03-a659-b9b74eb71ee5.png" id="25_cmau5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iadgl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_bjr76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_eoaxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qm180")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_60lwv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dmu2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2s2nv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_aynpq")
+}],
+"loop": 1,
+"name": &"afk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_fhkra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gv5sl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_j1ipl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ytiny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hc7ja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_lv4c4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_x8hit")
+}],
+"loop": 1,
+"name": &"last_spurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_ueyps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_xr2cs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1ctq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_5u8ei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_7yrog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_g3hg0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_cmau5")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Spechan" unique_id=171332758 instance=ExtResource("1_base")]
+script = ExtResource("2_iadgl")
+habilidades = Array[ExtResource("3_j1ipl")]([ExtResource("4_ytiny")])
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=1129245953]
+sprite_frames = SubResource("SpriteFrames_iadgl")
+animation = &"last_spurt"
