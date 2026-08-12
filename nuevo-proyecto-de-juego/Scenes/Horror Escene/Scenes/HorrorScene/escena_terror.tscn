@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dif56ltfqx5e8"]
+
+[ext_resource type="Script" uid="uid://b6y63kpq000ed" path="res://Scenes/Horror Escene/Scenes/HorrorScene/escena_terror.gd" id="1_5fl5g"]
+[ext_resource type="Texture2D" uid="uid://6ute8x8urt73" path="res://Scenes/Horror Escene/ChatGPT Image 12 ago 2026, 01_04_11 p.m.png" id="2_7b1vg"]
+[ext_resource type="PackedScene" uid="uid://b54fiaetk82d1" path="res://Scenes/Horror Escene/Scenes/Personajes/personaje.tscn" id="2_hhxxs"]
+[ext_resource type="Resource" uid="uid://ogyo8qpb0vt4" path="res://Scenes/Horror Escene/Data/Dias/dia1.tres" id="3_2eglk"]
+[ext_resource type="Texture2D" uid="uid://crgeje5cbhdgf" path="res://Scenes/Horror Escene/222.png" id="3_hhxxs"]
+[ext_resource type="AudioStream" uid="uid://cfqq5k5wxouwc" path="res://Scenes/Horror Escene/6_A_CYBERS_WORLD_DELTARUNE_Chapter_2_Soundtrack_-_Toby_Fox_audio.mp3" id="4_2eglk"]
+
+[node name="EscenaTerror" type="Node2D" unique_id=908144211]
+script = ExtResource("1_5fl5g")
+personaje_escena = ExtResource("2_hhxxs")
+dia_actual = ExtResource("3_2eglk")
+
+[node name="Fondo" type="Sprite2D" parent="." unique_id=217375924]
+position = Vector2(620, 333)
+scale = Vector2(0.582, 0.612)
+texture = ExtResource("2_7b1vg")
+
+[node name="Taquilla" type="Sprite2D" parent="." unique_id=799093908]
+position = Vector2(581, 328)
+scale = Vector2(1.1299639, 1.1299639)
+texture = ExtResource("3_hhxxs")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1464374031]
+position = Vector2(581, 331)
+zoom = Vector2(1.775, 1.065)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=792111914]
+stream = ExtResource("4_2eglk")
+
+[node name="Timer" type="Timer" parent="." unique_id=1186476348]

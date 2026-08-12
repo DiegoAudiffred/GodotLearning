@@ -14,7 +14,6 @@ offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_w0281")
-metadata/_edit_group_ = true
 
 [node name="Titulo" type="Label" parent="." unique_id=1664037334]
 layout_mode = 0
@@ -35,18 +34,16 @@ offset_bottom = 351.0
 text = "Bton para botonear
 "
 
-[node name="OpcionBoton" type="OptionButton" parent="." unique_id=1684973594]
+[node name="Boton2" type="Button" parent="." unique_id=1301212405]
 layout_mode = 0
-offset_left = 664.0
-offset_top = 253.0
-offset_right = 1080.0
-offset_bottom = 361.0
-item_count = 2
-popup/item_0/text = "1"
-popup/item_0/id = 0
-popup/item_1/text = "2"
-popup/item_1/id = 1
+offset_left = 562.0
+offset_top = 249.0
+offset_right = 864.0
+offset_bottom = 347.0
+text = "Bton para botonear2
+"
 
 [connection signal="mouse_entered" from="Titulo" to="." method="_on_titulo_mouse_entered"]
 [connection signal="mouse_exited" from="Titulo" to="." method="_on_titulo_mouse_exited"]
 [connection signal="pressed" from="Boton" to="." method="_on_boton_pressed"]
+[connection signal="pressed" from="Boton2" to="." method="_on_boton_2_pressed"]

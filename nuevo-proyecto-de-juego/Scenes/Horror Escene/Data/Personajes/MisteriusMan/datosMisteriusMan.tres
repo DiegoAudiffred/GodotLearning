@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DatosPersonajes" format=3 uid="uid://dcdobe2tlf5el"]
+
+[ext_resource type="Script" uid="uid://btcv0pdn3frhh" path="res://Scenes/Horror Escene/Data/Personajes/datosPersonajes.gd" id="1_4ulrw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_la0ls"]
+
+[resource]
+script = ExtResource("1_4ulrw")
+sprite_frames = SubResource("SpriteFrames_la0ls")
+metadata/_custom_type_script = "uid://btcv0pdn3frhh"

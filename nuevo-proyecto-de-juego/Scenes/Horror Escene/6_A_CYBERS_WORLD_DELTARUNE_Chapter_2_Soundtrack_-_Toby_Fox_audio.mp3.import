@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cfqq5k5wxouwc"
+path="res://.godot/imported/6_A_CYBERS_WORLD_DELTARUNE_Chapter_2_Soundtrack_-_Toby_Fox_audio.mp3-dd6d001a9e229e90156948faa146b2cb.mp3str"
+
+[deps]
+
+source_file="res://Scenes/Horror Escene/6_A_CYBERS_WORLD_DELTARUNE_Chapter_2_Soundtrack_-_Toby_Fox_audio.mp3"
+dest_files=["res://.godot/imported/6_A_CYBERS_WORLD_DELTARUNE_Chapter_2_Soundtrack_-_Toby_Fox_audio.mp3-dd6d001a9e229e90156948faa146b2cb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

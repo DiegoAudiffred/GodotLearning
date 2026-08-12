@@ -28,7 +28,7 @@ func _on_boton_pressed() -> void:
 	var spechan := preload("res://addons/Umas/Spechan/Spechan.tscn")
 	var susukasan := preload("res://addons/Umas/Susukasan/susukasan.tscn")
 
-	var seleccionadas: Array[PackedScene] = [susukasan]#,susukasan ]
+	var seleccionadas: Array[PackedScene] = [susukasan ]#,susukasan ]
 	pista.cargar_participantes(seleccionadas)
 
 	get_tree().root.add_child(pista) #agrega el nodo pista
@@ -47,3 +47,12 @@ func _on_boton_pressed() -> void:
 
 	#get_tree().change_scene_to_file("res://Escena2D.tscn") #solo admite strings
 	#==========================================================================
+
+
+func _on_boton_2_pressed() -> void:
+	var pista := preload("res://Scenes/Horror Escene/escena_terror.tscn").instantiate()
+
+
+	get_tree().root.add_child(pista) #agrega el nodo pista
+	get_tree().current_scene = pista #nueva escena
+	queue_free()

@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://b54fiaetk82d1"]
+
+[ext_resource type="Script" uid="uid://pw32waltvgld" path="res://Scenes/Horror Escene/Scenes/Personajes/personaje.gd" id="1_la0ls"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uuyli"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"arrive",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"leave",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"pay",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"salute",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"takeTicket",
+"speed": 5.0
+}]
+
+[node name="Personaje" type="Node2D" unique_id=1143240961]
+script = ExtResource("1_la0ls")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=34896437]
+sprite_frames = SubResource("SpriteFrames_uuyli")
+animation = &"takeTicket"
+
+[node name="Label" type="Label" parent="." unique_id=1343356918]
+offset_right = 40.0
+offset_bottom = 23.0

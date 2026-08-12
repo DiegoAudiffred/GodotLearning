@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Dias" format=3 uid="uid://ogyo8qpb0vt4"]
+
+[ext_resource type="Script" uid="uid://dlur8sgtsnivw" path="res://Scenes/Horror Escene/Data/Dias/dias.gd" id="1_4rutb"]
+[ext_resource type="Script" uid="uid://btcv0pdn3frhh" path="res://Scenes/Horror Escene/Data/Personajes/datosPersonajes.gd" id="2_oxcvq"]
+
+[resource]
+script = ExtResource("1_4rutb")
+metadata/_custom_type_script = "uid://dlur8sgtsnivw"
