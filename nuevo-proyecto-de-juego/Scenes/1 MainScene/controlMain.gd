@@ -50,7 +50,7 @@ func _on_boton_pressed() -> void:
 
 
 func _on_boton_2_pressed() -> void:
-	var pista := preload("res://Scenes/Horror Escene/escena_terror.tscn").instantiate()
+	var pista := preload("res://Scenes/Horror Escene/Scenes/HorrorScene/escena_terror.tscn").instantiate()
 
 
 	get_tree().root.add_child(pista) #agrega el nodo pista

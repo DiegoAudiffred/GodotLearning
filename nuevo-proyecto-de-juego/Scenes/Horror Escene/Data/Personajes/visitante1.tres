@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="DatosPersonajes" format=3 uid="uid://caroawp1tgite"]
-
-[ext_resource type="Script" uid="uid://btcv0pdn3frhh" path="res://Scenes/Horror Escene/Data/Personajes/datosPersonajes.gd" id="1_ny0ky"]
-
-[resource]
-script = ExtResource("1_ny0ky")
-metadata/_custom_type_script = "uid://btcv0pdn3frhh"

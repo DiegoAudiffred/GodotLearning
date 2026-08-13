@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="DatosPersonajes" format=3 uid="uid://caroawp1tgite"]
+
+[ext_resource type="Script" uid="uid://btcv0pdn3frhh" path="res://Scenes/Horror Escene/Data/Personajes/datosPersonajes.gd" id="1_j40bo"]
+[ext_resource type="Texture2D" uid="uid://brhmeugf8d416" path="res://Scenes/Horror Escene/Data/Personajes/MisteriusMan/A1.png" id="2_py5nq"]
+[ext_resource type="Texture2D" uid="uid://bcuucffgma67b" path="res://Scenes/Horror Escene/Data/Personajes/MisteriusMan/A2.png" id="3_op6fp"]
+[ext_resource type="Texture2D" uid="uid://cgcm2b3f62rr3" path="res://Scenes/Horror Escene/Data/Personajes/MisteriusMan/A3.png" id="4_8kug1"]
+[ext_resource type="Texture2D" uid="uid://cjq67nbbr5ryi" path="res://Scenes/Horror Escene/Data/Personajes/MisteriusMan/A4.png" id="5_3545m"]
+[ext_resource type="Texture2D" uid="uid://buovffs0h6lhw" path="res://Scenes/Horror Escene/Data/Personajes/MisteriusMan/B1.png" id="8_jnag5"]
+[ext_resource type="Texture2D" uid="uid://6s0vshtaom66" path="res://Scenes/Horror Escene/Data/Personajes/MisteriusMan/B2.png" id="9_hgaep"]
+[ext_resource type="Texture2D" uid="uid://cina3m3q1ssmw" path="res://Scenes/Horror Escene/Data/Personajes/MisteriusMan/B3.png" id="10_t4jq6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lpqxe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_py5nq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_op6fp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8kug1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3545m")
+}],
+"loop": 1,
+"name": &"arrive",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_jnag5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hgaep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_t4jq6")
+}],
+"loop": 0,
+"name": &"salute",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_j40bo")
+sprite_frames = SubResource("SpriteFrames_lpqxe")
+metadata/_custom_type_script = "uid://btcv0pdn3frhh"

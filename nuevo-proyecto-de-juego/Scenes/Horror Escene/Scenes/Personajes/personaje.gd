@@ -11,12 +11,13 @@ var datos: DatosPersonajes
 
 func cargar_datos(p_datos: DatosPersonajes) -> void:
 	datos = p_datos
+	z_index = 5
 	if datos and datos.sprite_frames:
 		animated_sprite_2d.sprite_frames = datos.sprite_frames
 
 
 func entrar_a_escena(posicion_objetivo: Vector2) -> void:
-	position = posicion_objetivo + Vector2(600, 0)
+	position = posicion_objetivo + Vector2(-700, 0)
 	
 	if animated_sprite_2d.sprite_frames.has_animation("arrive"):
 		animated_sprite_2d.play("arrive")
@@ -28,8 +29,8 @@ func entrar_a_escena(posicion_objetivo: Vector2) -> void:
 	reproducir_animacion("salute")
 	await animated_sprite_2d.animation_finished
 	
-	reproducir_animacion("idle")
-	llego_a_caseta.emit()
+	#reproducir_animacion("idle")
+	#llego_a_caseta.emit()
 
 
 func salir_de_escena() -> void:

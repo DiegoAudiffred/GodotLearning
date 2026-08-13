@@ -2,7 +2,10 @@
 
 [ext_resource type="Script" uid="uid://dlur8sgtsnivw" path="res://Scenes/Horror Escene/Data/Dias/dias.gd" id="1_4rutb"]
 [ext_resource type="Script" uid="uid://btcv0pdn3frhh" path="res://Scenes/Horror Escene/Data/Personajes/datosPersonajes.gd" id="2_oxcvq"]
+[ext_resource type="Resource" uid="uid://caroawp1tgite" path="res://Scenes/Horror Escene/Data/Personajes/MisteriusMan/visitante1.tres" id="3_v1gig"]
 
 [resource]
 script = ExtResource("1_4rutb")
+duration = 1000.0
+visitantes = Array[ExtResource("2_oxcvq")]([ExtResource("3_v1gig")])
 metadata/_custom_type_script = "uid://dlur8sgtsnivw"

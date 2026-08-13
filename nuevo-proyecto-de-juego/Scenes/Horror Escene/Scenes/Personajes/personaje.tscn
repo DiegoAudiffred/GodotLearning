@@ -5,7 +5,7 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_uuyli"]
 animations = [{
 "frames": [],
-"loop": 1,
+"loop": 0,
 "name": &"arrive",
 "speed": 5.0
 }, {
@@ -39,6 +39,8 @@ animations = [{
 script = ExtResource("1_la0ls")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=34896437]
+position = Vector2(104.5, 194.07141)
+scale = Vector2(2.8660715, 2.8660712)
 sprite_frames = SubResource("SpriteFrames_uuyli")
 animation = &"takeTicket"
 

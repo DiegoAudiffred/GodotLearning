@@ -28,15 +28,15 @@ func aparecer_siguiente_visitante() -> void:
 	
 	visitante_actual.cargar_datos(datos_visitante)
 	
-	var centro_camara = returnCameraCenter()
+	var centro_camara = returnCameraCenter() - Vector2(110,0)
 	visitante_actual.entrar_a_escena(centro_camara)
 	
 	indice_visitante += 1
 
 
 func returnCameraCenter() -> Vector2:
-	return camera_2d.get_screen_center_position()
-
+	#return camera_2d.get_screen_center_position()
+	return camera_2d.get_target_position()
 
 func playNewMusic(audio: AudioStream) -> void:
 	audio_stream_player_2d.set_stream(audio)
